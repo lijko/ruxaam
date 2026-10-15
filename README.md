@@ -2,14 +2,20 @@
 
 **FR** — Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité d'application mobile**, avant l'audit complet. Il croise :
 
-- **59 critères essentiels du RAAM 1.1** (référentiel du SIP, Luxembourg), évalués un à un (conforme, non conforme, non testé, non applicable), qui donnent un **taux de conformité** ;
-- **une lecture UX qualitative** (principes POUR de WCAG et heuristiques d'utilisabilité), **exclue du taux**.
+- **52 critères essentiels du RAAM 1.1** (référentiel du SIP, Luxembourg), dont 20 « si présent », évalués un à un (conforme, non conforme, non testé, non applicable), qui donnent un **taux de conformité** ;
+- **une lecture UX qualitative** (principes POUR de WCAG et heuristiques d'utilisabilité), **exclue du taux** ;
+- **3 bonnes pratiques** hors RAAM (zone tactile, retour ou fermeture, retour du focus), également hors taux.
 
 Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports CSV, Jira, JSON et PDF.
 
+- **Protocole de test en 4 étapes** : 1. usage standard, 2. agrandissement, 3. lecteur d'écran (3a contenus et structure, 3b composants, formulaires et annonces), 4. navigation alternative. Chaque critère est rattaché à l'étape où on le constate le plus facilement. Séquence construite par RUXAAM à partir des pratiques décrites par Apple et Android ; ce n'est pas un protocole officiel.
+- **Vue « Par étape de test »** : la liste d'un onglet RAAM se range par thème ou par étape, sans effet sur le taux ni les exports.
+- **Plateforme** (iOS, Android ou multiplateforme) : un audit = une plateforme ; elle détermine les recommandations et l'étiquette des tickets Jira.
+- **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu.
+
 RUXAAM n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert.
 
-**EN** — Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **59 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It is **not a compliance audit**.
+**EN** — Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **52 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It offers a 4-step test protocol (standard use, enlargement, screen reader, alternative navigation), a view by test step, and a platform choice for Jira tickets. It is **not a compliance audit**.
 
 ## Utilisation
 Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, aucun appel réseau. Les données restent dans le navigateur ; l'état s'exporte et s'importe en JSON.
@@ -18,14 +24,14 @@ Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, auc
 | Fichier | Rôle |
 |---|---|
 | `ruxaam.html` | l'outil |
-| `DOCUMENTATION.md` | sélection des critères, règle « si présent », gravités, limites, liste des 59 critères |
+| `DOCUMENTATION.md` | sélection des critères, règle « si présent », protocole de test, gravités, limites, liste des 52 critères |
 | `LICENSE` | EUPL-1.2 |
 | `README.md` | ce fichier |
 
 ## Licence et attributions
 - **Code, textes d'impact et de test, thèmes, gravités et bonnes pratiques de RUXAAM** : © 2026 Bertrand Kempf, [EUPL-1.2](LICENSE).
 - **Critères du RAAM 1.1** (intitulés, niveaux, références WCAG et EN 301 549) : © Service information et presse (SIP), Luxembourg, [CC BY 3.0 LU](https://creativecommons.org/licenses/by/3.0/lu/), reproduits sans modification. Le RAAM est lui-même dérivé de documents de la DINUM (RGAA). Source : <https://github.com/accessibility-luxembourg/ReferentielAccessibiliteMobile>. Ces éléments restent sous leur licence d'origine ; l'EUPL ne s'y applique pas.
-  Modifications de RUXAAM : sélection de 59 critères, regroupement par thèmes, gravités, textes d'impact et de test.
+  Modifications de RUXAAM : sélection de 52 critères, regroupement par thèmes, étapes de test, gravités, textes d'impact et de test.
 - **jsPDF 2.5.1** (embarqué dans `ruxaam.html`) : © 2010-2021 James Hall et contributeurs, licence MIT. Les en-têtes de copyright de la bibliothèque et de ses greffons sont conservés dans le fichier.
 - **WCAG 2.1** : © W3C. Les numéros et intitulés des critères de succès viennent du RAAM ; les textes de RUXAAM sont originaux.
 - **Heuristiques d'utilisabilité** : Nielsen Norman Group, <https://www.nngroup.com/articles/ten-usability-heuristics/> (questions reformulées par RUXAAM, texte d'origine non reproduit).
