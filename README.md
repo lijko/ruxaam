@@ -11,11 +11,13 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Protocole de test en 4 étapes** : 1. usage standard, 2. agrandissement, 3. lecteur d'écran (3a contenus et structure, 3b composants, formulaires et annonces), 4. navigation alternative. Chaque critère est rattaché à l'étape où on le constate le plus facilement. Séquence construite par RUXAAM à partir des pratiques décrites par Apple et Android ; ce n'est pas un protocole officiel.
 - **Vue « Par étape de test »** : la liste d'un onglet RAAM se range par thème ou par étape, sans effet sur le taux ni les exports.
 - **Plateforme** (iOS, Android ou multiplateforme) : un audit = une plateforme ; elle détermine les recommandations et l'étiquette des tickets Jira.
-- **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu.
+- **Contenu des écrans** : un interrupteur par écran et par type d'élément (CAPTCHA, image complexe, média, tableau, formulaire), plus « Limite de session » pour toute l'application. Un critère « si présent » ne s'affiche que là où l'élément existe ; ailleurs il compte comme NA, sans rien effacer.
+- **Élément concerné** : pour chaque critère non conforme, la notation `Écran[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend.
+- **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira — tout réexporter » pour tout reprendre).
 
 RUXAAM n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert.
 
-**EN** — Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **52 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It offers a 4-step test protocol (standard use, enlargement, screen reader, alternative navigation), a view by test step, and a platform choice for Jira tickets. It is **not a compliance audit**.
+**EN** — Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **52 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It offers a 4-step test protocol (standard use, enlargement, screen reader, alternative navigation), a view by test step, per-screen content switches for conditional criteria, an « affected element » field, and Jira export with platform choice and memory of exported tickets. It is **not a compliance audit**.
 
 ## Utilisation
 Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, aucun appel réseau. Les données restent dans le navigateur ; l'état s'exporte et s'importe en JSON.
@@ -25,6 +27,7 @@ Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, auc
 |---|---|
 | `ruxaam.html` | l'outil |
 | `DOCUMENTATION.md` | sélection des critères, règle « si présent », protocole de test, gravités, limites, liste des 52 critères |
+| `donnees-fictives-ruxaam-v1.22.json` | audit fictif à importer (bouton « Importer ») pour essayer l'outil |
 | `LICENSE` | EUPL-1.2 |
 | `README.md` | ce fichier |
 

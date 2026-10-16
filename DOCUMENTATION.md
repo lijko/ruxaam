@@ -19,7 +19,9 @@ Quatre statuts par critère et par écran : **C** (conforme), **NC** (non confor
 - Plus 3 bonnes pratiques hors RAAM (section 9), soit 57 éléments dans l'outil.
 
 ## 5. Règle « si présent »
-20 critères sur 52 ne s'appliquent que si l'écran (ou l'application) contient l'élément concerné. Chacun est rattaché à l'un des six déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ». Si l'élément est absent, mets le critère en NA : il sort du taux.
+20 critères sur 52 ne s'appliquent que si l'écran (ou l'application) contient l'élément concerné. Chacun est rattaché à l'un des six déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
+
+En tête de chaque onglet RAAM, le panneau **« Contenu des écrans »** porte un interrupteur par écran et par élément, plus un interrupteur « Limite de session » valable pour toute l'application. Tout est désactivé au départ. Un critère « si présent » ne s'affiche que si au moins un écran contient l'élément ; sur un écran qui ne le contient pas, il affiche « Absent » et compte comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les statuts et commentaires. Une ligne sous le tableau indique combien de critères restent masqués. Une sauvegarde plus ancienne garde visibles les critères « si présent » déjà évalués, pour que le taux ne change pas.
 
 | Déclencheur | Le critère s'applique si… | Critères |
 |---|---|---|
@@ -47,6 +49,20 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 **Vue « Par étape de test »** : dans un onglet RAAM, le commutateur « Vue : Par thème | Par étape de test » range la liste selon ces étapes, avec un rappel de la consigne en tête de chaque étape. Un critère n'apparaît qu'une fois. Statuts, taux et exports ne changent pas.
 
 **Plateforme** : sous le nom de l'audit, choisis iOS, Android ou Multiplateforme (un second clic désélectionne). Convention : un audit = une plateforme. Dans l'export Jira, la rubrique « Per platform » ne contient que la plateforme choisie (iOS et Android si aucune), et chaque ticket reçoit l'étiquette `ios`, `android` ou `multiplateforme`.
+
+**Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
+
+| Ce que tu désignes | Notation | Exemple |
+|---|---|---|
+| Un écran | `Écran` | `Produits` |
+| Un élément | `Écran[type]` | `Produits[list]` |
+| Un élément avec son libellé | `Écran[type "Libellé"]` | `Accueil[button "Connexion"]` |
+| Un élément avec un état | `Écran[type "Libellé"] (état)` | `Accueil[button "Valider"] (disabled)` |
+| Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
+
+L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ».
+
+**Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois : « 3 ticket(s) déjà exporté(s), 2 nouveau(x) ». « Tickets Jira — tout réexporter » reprend tous les critères non conformes, par exemple si l'import dans Jira a échoué. Le champ « Ticket Jira » des versions précédentes n'existe plus.
 
 **Exports** : aucun fichier vide n'est produit. Sans onglet, sans onglet RAAM, sans critère testé ou sans critère non conforme, un message explique pourquoi l'export n'a pas lieu. À l'import d'une sauvegarde plus ancienne, l'outil indique combien de critères de la sauvegarde n'existent plus dans cette version, et combien étaient non conformes.
 
@@ -81,6 +97,7 @@ Trois bonnes pratiques, signalées « Hors RAAM » et exclues du taux :
 - Pré-diagnostic : ne produit ni déclaration d'accessibilité ni taux de conformité officiel.
 - Pas de comparaison avec l'audit simplifié du SIP, fondé sur le RAWEB.
 - Test réel sur VoiceOver et TalkBack à compléter.
+- Un critère déjà exporté vers Jira qui devient non conforme sur un autre écran n'est pas réexporté automatiquement : utilise « Tickets Jira — tout réexporter » ou complète le ticket existant.
 - Les consignes de test sont des aides de lecture : la méthodologie officielle du RAAM fait foi.
 
 ## 11. Modifier l'outil
