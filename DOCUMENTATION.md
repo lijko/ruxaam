@@ -35,10 +35,10 @@ En tête de chaque onglet RAAM, le panneau **« Contenu des écrans »** porte u
 ## 6. Protocole de test en 4 étapes
 Un audit rapide se fait en 4 étapes, toujours dans cet ordre, sur les mêmes écrans. Chaque critère est rattaché à l'étape où on le constate le plus facilement (pastille « Étape … ») ; on peut répondre au fil des étapes.
 
-1. **Usage standard** — aucun réglage d'accessibilité activé : contenus, images, couleurs et contrastes, composants, formulaires, messages.
-2. **Agrandissement** — deux passes, en remettant le réglage par défaut entre les deux : texte agrandi (iOS : Affichage et taille du texte ; Android : Taille de la police), puis affichage agrandi (iOS : Zoom de l'affichage ; Android : Taille de l'affichage). Critère 8.2 et bonne pratique zone tactile.
-3. **Lecteur d'écran** — VoiceOver (iOS) ou TalkBack (Android), en balayant d'élément en élément. 3a : contenus et structure ; 3b : composants, formulaires et annonces. C'est l'étape qui concentre le plus de critères.
-4. **Navigation alternative** — clavier externe (Bluetooth), commande vocale ; contrôle de sélection (iOS) et Switch Access (Android) optionnels en audit rapide.
+1. **Usage standard** (aucun réglage d'accessibilité activé) : contenus, images, couleurs et contrastes, composants, formulaires, messages.
+2. **Agrandissement** en deux passes, en remettant le réglage par défaut entre les deux : texte agrandi (iOS : Affichage et taille du texte ; Android : Taille de la police), puis affichage agrandi (iOS : Zoom de l'affichage ; Android : Taille de l'affichage). Critère 8.2 et bonne pratique zone tactile.
+3. **Lecteur d'écran** avec VoiceOver (iOS) ou TalkBack (Android), en balayant d'élément en élément. 3a : contenus et structure ; 3b : composants, formulaires et annonces. C'est l'étape qui concentre le plus de critères.
+4. **Navigation alternative** : clavier externe (Bluetooth), commande vocale ; contrôle de sélection (iOS) et Switch Access (Android) optionnels en audit rapide.
 
 Un critère se constate parfois à plusieurs étapes : l'outil indique l'étape principale, mais un doute à une autre étape compte. En cas de résultats différents, retiens le pire (NC l'emporte sur C). Le test sur appareil réel est la référence : les simulateurs ne reproduisent pas fidèlement VoiceOver et TalkBack.
 
@@ -62,7 +62,7 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 
 L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ».
 
-**Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois : « 3 ticket(s) déjà exporté(s), 2 nouveau(x) ». « Tickets Jira — tout réexporter » reprend tous les critères non conformes, par exemple si l'import dans Jira a échoué. Le champ « Ticket Jira » des versions précédentes n'existe plus.
+**Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois : « 3 ticket(s) déjà exporté(s), 2 nouveau(x) ». « Tickets Jira : tout réexporter » reprend tous les critères non conformes, par exemple si l'import dans Jira a échoué. Le champ « Ticket Jira » des versions précédentes n'existe plus.
 
 **Exports** : aucun fichier vide n'est produit. Sans onglet, sans onglet RAAM, sans critère testé ou sans critère non conforme, un message explique pourquoi l'export n'a pas lieu. À l'import d'une sauvegarde plus ancienne, l'outil indique combien de critères de la sauvegarde n'existent plus dans cette version, et combien étaient non conformes.
 
@@ -89,15 +89,15 @@ Répartition par défaut des 52 critères RAAM : 29 Sérieux, 12 Critique, 10 Mo
 
 ## 9. Bonnes pratiques hors RAAM
 Trois bonnes pratiques, signalées « Hors RAAM » et exclues du taux :
-- **bp1 — Zone tactile** : au moins 44×44 pt sur iOS, 48×48 dp sur Android (recommandations d'Apple et d'Android ; WCAG 2.2 demande 24 px au niveau AA, 44 px au niveau AAA).
-- **bp2 — Retour ou fermeture** : chaque écran et chaque vue modale offre un moyen évident de revenir en arrière ou de se fermer.
-- **bp3 — Retour du focus** : à la fermeture d'une fenêtre modale, le focus revient sur l'élément qui l'avait ouverte.
+- **Zone tactile (bp1)** : au moins 44×44 pt sur iOS, 48×48 dp sur Android (recommandations d'Apple et d'Android ; WCAG 2.2 demande 24 px au niveau AA, 44 px au niveau AAA).
+- **Retour ou fermeture (bp2)** : chaque écran et chaque vue modale offre un moyen évident de revenir en arrière ou de se fermer.
+- **Retour du focus (bp3)** : à la fermeture d'une fenêtre modale, le focus revient sur l'élément qui l'avait ouverte.
 
 ## 10. Limites
 - Pré-diagnostic : ne produit ni déclaration d'accessibilité ni taux de conformité officiel.
 - Pas de comparaison avec l'audit simplifié du SIP, fondé sur le RAWEB.
 - Test réel sur VoiceOver et TalkBack à compléter.
-- Un critère déjà exporté vers Jira qui devient non conforme sur un autre écran n'est pas réexporté automatiquement : utilise « Tickets Jira — tout réexporter » ou complète le ticket existant.
+- Un critère déjà exporté vers Jira qui devient non conforme sur un autre écran n'est pas réexporté automatiquement : utilise « Tickets Jira : tout réexporter » ou complète le ticket existant.
 - Les consignes de test sont des aides de lecture : la méthodologie officielle du RAAM fait foi.
 
 ## 11. Modifier l'outil

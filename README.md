@@ -1,6 +1,6 @@
-# RUXAAM — Revue UX Accessibilité (mobile)
+# RUXAAM : Revue UX Accessibilité (mobile)
 
-**FR** — Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité d'application mobile**, avant l'audit complet. Il croise :
+**FR** : Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité d'application mobile**, avant l'audit complet. Il croise :
 
 - **52 critères essentiels du RAAM 1.1** (référentiel du SIP, Luxembourg), dont 20 « si présent », évalués un à un (conforme, non conforme, non testé, non applicable), qui donnent un **taux de conformité** ;
 - **une lecture UX qualitative** (principes POUR de WCAG et heuristiques d'utilisabilité), **exclue du taux** ;
@@ -13,11 +13,11 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Plateforme** (iOS, Android ou multiplateforme) : un audit = une plateforme ; elle détermine les recommandations et l'étiquette des tickets Jira.
 - **Contenu des écrans** : un interrupteur par écran et par type d'élément (CAPTCHA, image complexe, média, tableau, formulaire), plus « Limite de session » pour toute l'application. Un critère « si présent » ne s'affiche que là où l'élément existe ; ailleurs il compte comme NA, sans rien effacer.
 - **Élément concerné** : pour chaque critère non conforme, la notation `Écran[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend.
-- **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira — tout réexporter » pour tout reprendre).
+- **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira : tout réexporter » pour tout reprendre).
 
 RUXAAM n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert.
 
-**EN** — Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **52 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It offers a 4-step test protocol (standard use, enlargement, screen reader, alternative navigation), a view by test step, per-screen content switches for conditional criteria, an « affected element » field, and Jira export with platform choice and memory of exported tickets. It is **not a compliance audit**.
+**EN** : Standalone, offline, single-file HTML tool to **prepare and prioritise a mobile accessibility audit**. It combines **52 essential RAAM 1.1 criteria** (Luxembourg's mobile accessibility standard; compliance rate) with a **qualitative UX layer** (WCAG POUR principles and usability heuristics; excluded from the rate). It offers a 4-step test protocol (standard use, enlargement, screen reader, alternative navigation), a view by test step, per-screen content switches for conditional criteria, an « affected element » field, and Jira export with platform choice and memory of exported tickets. It is **not a compliance audit**.
 
 ## Utilisation
 Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, aucun appel réseau. Les données restent dans le navigateur ; l'état s'exporte et s'importe en JSON.

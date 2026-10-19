@@ -4,7 +4,7 @@
   "outilVersion": "1.22",
   "genereLe": "2026-10-15T10:45:02.576Z",
   "state": {
-    "auditNom": "Appli démo — Mon Compte (données fictives)",
+    "auditNom": "Appli démo : Mon Compte (données fictives)",
     "plateforme": "ios",
     "ticketsJira": {},
     "filtreRetest": false,
