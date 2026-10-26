@@ -12,6 +12,8 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Vue « Par étape de test »** : la liste d'un onglet RAAM se range par thème ou par étape, sans effet sur le taux ni les exports.
 - **Plateforme** (iOS, Android ou multiplateforme) : un audit = une plateforme ; elle détermine les recommandations et l'étiquette des tickets Jira.
 - **Contenu des écrans** : un interrupteur par écran et par type d'élément (CAPTCHA, image complexe, média, tableau, formulaire), plus « Limite de session » pour toute l'application. Un critère « si présent » ne s'affiche que là où l'élément existe ; ailleurs il compte comme NA, sans rien effacer.
+- **Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
+- **Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi en tête de liste, avec la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
 - **Élément concerné** : pour chaque critère non conforme, la notation `Écran[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend.
 - **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira : tout réexporter » pour tout reprendre).
 

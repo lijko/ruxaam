@@ -50,6 +50,10 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 
 **Plateforme** : sous le nom de l'audit, choisis iOS, Android ou Multiplateforme (un second clic désélectionne). Convention : un audit = une plateforme. Dans l'export Jira, la rubrique « Per platform » ne contient que la plateforme choisie (iOS et Android si aucune), et chaque ticket reçoit l'étiquette `ios`, `android` ou `multiplateforme`.
 
+**Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
+
+**Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi en tête de liste, avec la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
+
 **Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
 
 | Ce que tu désignes | Notation | Exemple |
