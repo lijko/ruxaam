@@ -6,7 +6,7 @@
 - **une lecture UX qualitative** (principes POUR de WCAG et heuristiques d'utilisabilité), **exclue du taux** ;
 - **3 bonnes pratiques** hors RAAM (zone tactile, retour ou fermeture, retour du focus), également hors taux.
 
-Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports CSV, Jira, JSON et PDF.
+Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports Excel (liste des critères), CSV (import Jira), JSON et PDF.
 
 - **Protocole de test en 4 étapes** : 1. usage standard, 2. agrandissement, 3. lecteur d'écran (3a contenus et structure, 3b composants, formulaires et annonces), 4. navigation alternative. Chaque critère est rattaché à l'étape où on le constate le plus facilement. Séquence construite par RUXAAM à partir des pratiques décrites par Apple et Android ; ce n'est pas un protocole officiel.
 - **Vue « Par étape de test »** : la liste d'un onglet RAAM se range par thème ou par étape, sans effet sur le taux ni les exports.
@@ -15,6 +15,7 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
 - **Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi en tête de liste, avec la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
 - **Élément concerné** : pour chaque critère non conforme, la notation `Écran[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend.
+- **Formats d'export** : Liste des critères en **Excel (.xlsx)** : une ligne par critère et par onglet, colonnes dimensionnées, ligne d'en-tête figée, filtres, statuts colorés, numéros de critères gardés en texte (« 10.10 » reste 10.10). Tickets Jira en **CSV** (séparateur virgule), à importer dans Jira et non à ouvrir dans Excel. Le téléchargement passe uniquement par le navigateur, sans dépendance à une autre application. 
 - **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira : tout réexporter » pour tout reprendre).
 
 RUXAAM n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert.
