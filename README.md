@@ -30,7 +30,7 @@ Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, auc
 |---|---|
 | `ruxaam.html` | l'outil |
 | `DOCUMENTATION.md` | sélection des critères, règle « si présent », protocole de test, gravités, limites, liste des 52 critères |
-| `donnees-fictives-ruxaam-v1.22.json` | audit fictif à importer (bouton « Importer ») pour essayer l'outil |
+| `donnees-fictives-ruxaam-v1.27.json` | audit fictif à importer (bouton « Importer ») pour essayer l'outil : audit rapide sur 3 écrans et scénario de souscription |
 | `LICENSE` | EUPL-1.2 |
 | `README.md` | ce fichier |
 
