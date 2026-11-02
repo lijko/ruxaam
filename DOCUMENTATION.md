@@ -92,10 +92,10 @@ La gravité de RUXAAM sert à **trier** les non-conformités et à **fixer la pr
 
 | Niveau | Repère | Priorité Jira |
 |---|---|---|
-| **Critique** | Empêche, pour au moins un groupe d'utilisateurs, d'accéder à une fonction ou à un contenu essentiel, sans contournement ; ou met la personne en danger (effets de flash). | Highest |
-| **Sérieux** | Barrière forte : rend la tâche très difficile, et peut la bloquer selon le contexte. | High |
+| **Critique** | Empêche, pour au moins un groupe d'utilisateurs, d'accéder à une fonction ou à un contenu essentiel, sans contournement ; ou met la personne en danger (effets de flash). | Blocker |
+| **Sérieux** | Barrière forte : rend la tâche très difficile, et peut la bloquer selon le contexte. | Highest |
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
-| **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Low |
+| **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Minor |
 
 Pour choisir : la tâche reste-t-elle possible ? Pour qui (lecteur d'écran, clavier ou contacteur, basse vision, surdité, troubles cognitifs, motricité) ? Existe-t-il un contournement raisonnable ?
 
