@@ -75,7 +75,15 @@ L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) /
 ## 7. Thèmes RUXAAM
 Taxonomie propre à RUXAAM, qui regroupe les critères RAAM autrement que les 15 thèmes officiels, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu, au clavier ou avec une technologie d'assistance, relève de « Navigation & structure ».
 
-Navigation & structure · Composants interactifs · Images & médias · Couleurs & contrastes · Contenu & lisibilité · Fondations techniques · Formulaires.
+| Thème | Description | RAAM 1.1 (RUXAAM) | RAWeb 1.1 (RUXAWEB) |
+|---|---|---|---|
+| Navigation & structure | Tout ce qui permet ou empêche d'atteindre un élément ou un contenu, au clavier ou avec une technologie d'assistance ; structure de l'écran. | 5.2, 5.3, 7.1, 8.5, 10.1, 10.2, 10.3 | 2.1, 6.1, 6.2, 7.3, 8.5, 8.6, 9.1, 9.2, 9.3, 10.7, 10.14, 12.6, 12.7, 12.8, 12.9 |
+| Composants interactifs | Nom, rôle et état des boutons et contrôles ; messages de statut ; gestes, limites de temps et authentification. | 5.1, 5.4, 5.5, 8.7, 11.1, 11.2, 11.10, 11.11, 11.12, 11.13, 11.15 | 7.1, 7.5, 12.11, 13.1, 13.11 |
+| Images & médias | Alternatives textuelles des images ; sous-titres, transcriptions et contrôle des médias et du son. | 1.1 à 1.6, 3.5, 3.7, 3.9, 3.12, 3.13 | 1.1 à 1.7, 4.1 à 4.4, 4.8 à 4.11 |
+| Couleurs & contrastes | Contrastes ; information qui ne doit pas reposer uniquement sur la couleur, la forme, la taille ou la position. | 2.1, 2.2, 2.3, 8.6 | 3.1, 3.2, 3.3, 10.9, 10.10 |
+| Contenu & lisibilité | Texte lisible et agrandissable, tableaux, orientation, animations et flashs, documents. | 4.5, 8.1, 8.2, 11.7, 11.8, 11.9 | 5.6, 5.7, 10.4, 13.7, 13.8 |
+| Fondations techniques | Langue, éléments décoratifs ignorés par les technologies d'assistance, respect des réglages d'accessibilité du système. | 6.1, 6.2, 12.3 | 8.2, 8.3, 8.4, 8.7, 8.8, 10.8 |
+| Formulaires | Étiquettes, champs, erreurs et aide à la saisie. | 9.1, 9.2, 9.3, 9.5 à 9.11 | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
 
 ## 8. Gravité
 **La gravité n'est pas normative.** Ni le RAAM ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
