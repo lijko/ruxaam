@@ -73,9 +73,9 @@ L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) /
 **Exports** : aucun fichier vide n'est produit. Sans onglet, sans onglet RAAM, sans critère testé ou sans critère non conforme, un message explique pourquoi l'export n'a pas lieu. À l'import d'une sauvegarde plus ancienne, l'outil indique combien de critères de la sauvegarde n'existent plus dans cette version, et combien étaient non conformes.
 
 ## 7. Thèmes RUXAAM
-Taxonomie propre à RUXAAM, qui regroupe les critères RAAM autrement que les 15 thèmes officiels, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu au clavier relève de « Navigation & Structure ».
+Taxonomie propre à RUXAAM, qui regroupe les critères RAAM autrement que les 15 thèmes officiels, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu, au clavier ou avec une technologie d'assistance, relève de « Navigation & structure ».
 
-Navigation & Structure · Composants Interactifs · Images & Médias · Couleurs & Contrastes · Contenu & Lisibilité · Fondations Techniques · Formulaires.
+Navigation & structure · Composants interactifs · Images & médias · Couleurs & contrastes · Contenu & lisibilité · Fondations techniques · Formulaires.
 
 ## 8. Gravité
 **La gravité n'est pas normative.** Ni le RAAM ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
@@ -112,7 +112,7 @@ Tout est dans `ruxaam.html` : les critères et leurs textes se trouvent dans le 
 ## 12. Les 52 critères
 Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAAM.
 
-### Navigation & Structure (7)
+### Navigation & structure (7)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -124,7 +124,7 @@ Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU.
 | 10.2 | A | Sérieux | 3a |  | Dans chaque écran, l’ordre de restitution par les technologies d’assistance est-il cohérent ? |
 | 10.3 | A | Critique | 4 |  | Dans chaque écran, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée ? |
 
-### Composants Interactifs (11)
+### Composants interactifs (11)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -140,7 +140,7 @@ Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU.
 | 11.13 | A | Sérieux | 1 |  | Dans chaque écran, les fonctionnalités qui impliquent un mouvement de l’appareil ou vers l’appareil peuvent-elles être satisfaites de manière alternative (hors cas particuliers) ? |
 | 11.15 | A | Critique | 1 |  | Chaque fonctionnalité d’identification ou de contrôle qui repose sur l’utilisation de caractéristiques biologiques de l’utilisateur dispose-t-elle d’une méthode alternative ? |
 
-### Images & Médias (11)
+### Images & médias (11)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -156,7 +156,7 @@ Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU.
 | 3.12 | A | Sérieux | 1 | Média temporel ou son | Chaque séquence sonore déclenchée automatiquement est-elle contrôlable par l’utilisateur ? |
 | 3.13 | A | Sérieux | 1 | Média temporel ou son | Chaque média temporel a-t-il, si nécessaire, les fonctionnalités de contrôle de sa consultation ? |
 
-### Couleurs & Contrastes (4)
+### Couleurs & contrastes (4)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -165,7 +165,7 @@ Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU.
 | 2.3 | AA | Sérieux | 1 |  | Dans chaque écran, les couleurs utilisées dans les composants d’interface et les éléments graphiques porteurs d’informations sont-elles suffisamment contrastées (hors cas particuliers) ? |
 | 8.6 | A | Modéré | 1 |  | Dans chaque écran, l’information ne doit pas être donnée uniquement par la forme, taille ou position. Cette règle est-elle respectée ? |
 
-### Contenu & Lisibilité (6)
+### Contenu & lisibilité (6)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -176,7 +176,7 @@ Intitulés, niveaux et références du RAAM 1.1 © SIP Luxembourg, CC BY 3.0 LU.
 | 11.8 | A | Sérieux | 1 |  | Dans chaque écran, chaque contenu en mouvement ou clignotant est-il contrôlable par l’utilisateur ? |
 | 11.9 | AA | Sérieux | 1 |  | Dans chaque écran, le contenu proposé est-il consultable quelle que soit l’orientation de l’écran (portrait ou paysage) (hors cas particuliers) ? |
 
-### Fondations Techniques (3)
+### Fondations techniques (3)
 
 | RAAM | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
