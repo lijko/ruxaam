@@ -1180,7 +1180,7 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
   // Numéro de version de l'outil (affiché sur l'écran Aide, repris dans les exports JSON), à incrémenter à
   // chaque évolution notable, indépendamment de "version" dans buildFullStatePayload (qui est un numéro de
   // format de fichier, pas de l'outil).
-  var APP_VERSION = '1.28';
+  var APP_VERSION = '1.29';
 
   // <<< DEBUT_DONNEES : généré par scripts/build_ruxaam.py depuis data/, ne pas modifier à la main >>>
   var CRITERES = [
@@ -3115,17 +3115,17 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
         ? ['- Outside the RAAM 1.1 reference (good practice): '+c.libelle_en].concat((c.sources||[]).map(function(s){ return '- '+s.t+' : '+s.u; }))
         : ['- RAAM 1.1, Criterion '+c.raam+': '+c.libelle_en, '  '+refUrl];
       var desc = [
-        'Flow(s) / Screen(s) / Element(s) in concern'
-      ].concat(flowsTxt, objets.length ? objets : ['<Screen>[<element>]'], [
+        'h1. Flow(s) / Screen(s) / Element(s) in concern'
+      ].concat(flowsTxt, objets.length ? objets : ['<Screen> [<element>]'], [
         '',
-        'Actual behavior / Impact',
+        'h1. Actual behavior / Impact',
         commentaires.length ? commentaires.join('\n') : '<to be completed>',
         'Impact: '+impactTxt,
         '',
-        'Expected behavior',
+        'h1. Expected behavior',
         c.libelle_en,
         '',
-        'Recommendations',
+        'h1. Recommendations',
         '',
         'Per platform:'
       ].concat(
@@ -3138,7 +3138,7 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
         'Best practices:',
         '- <to be completed>',
         '',
-        'Reference'
+        'h1. Reference'
       ]).concat(refLines)).join('\n');
       var labels = ['accessibilite'].concat(state.plateforme ? [{ios:'ios',android:'android',cross:'multiplateforme'}[state.plateforme]] : []).concat([(c.horsRaam ? 'hors-raam' : 'RAAM-'+c.raam), theme.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')]);
       lignes.push([summary, desc, 'Task', PRIORITE_JIRA[c.niveau]||'Medium'].concat(labels).map(csvEscapeVirgule).join(','));
