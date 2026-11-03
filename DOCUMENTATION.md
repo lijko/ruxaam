@@ -59,10 +59,13 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 | Ce que tu désignes | Notation | Exemple |
 |---|---|---|
 | Un écran | `Écran` | `Produits` |
-| Un élément | `Écran[type]` | `Produits[list]` |
-| Un élément avec son libellé | `Écran[type "Libellé"]` | `Accueil[button "Connexion"]` |
-| Un élément avec un état | `Écran[type "Libellé"] (état)` | `Accueil[button "Valider"] (disabled)` |
+| Un élément | `Écran ["Libellé" type]` | `Accueil ["Connexion" button]` |
+| Un élément dans un autre | `Écran ["Libellé" type, "Libellé" type]` | `Contact ["Nous écrire" form, "Email" field]` |
+| Un élément répété | `["Libellé" type]` | `[Main navigation, "Accueil" tab]` |
+| Un élément dans un état | `Écran ["Libellé" type] (état)` | `Accueil ["Valider" button] (disabled)` |
 | Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
+
+La notation sert à retrouver l'élément, pas à le décrire : libellé entre guillemets, type en clair, du plus large au plus précis, séparés par une virgule. L'état ne figure que s'il faut le provoquer pour voir le défaut ; sinon il est dit dans le commentaire.
 
 L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ».
 
