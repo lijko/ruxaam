@@ -48,7 +48,7 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 
 **Vue « Par étape de test »** : dans un onglet RAAM, le commutateur « Vue : Par thème | Par étape de test » range la liste selon ces étapes, avec un rappel de la consigne en tête de chaque étape. Un critère n'apparaît qu'une fois. Statuts, taux et exports ne changent pas.
 
-**Plateforme** : sous le nom de l'audit, choisis iOS, Android ou Multiplateforme (un second clic désélectionne). Convention : un audit = une plateforme. Dans l'export Jira, la rubrique « Per platform » ne contient que la plateforme choisie (iOS et Android si aucune), et chaque ticket reçoit l'étiquette `ios`, `android` ou `multiplateforme`.
+**Plateforme** : sous le nom de l'audit, choisis iOS, Android ou Multiplateforme (un second clic désélectionne). Convention : un audit = une plateforme. Dans l'export Jira, la référence cite l'intitulé officiel anglais du critère (l'interface garde l'intitulé français) ; la rubrique « Per platform » ne contient que la plateforme choisie (iOS et Android si aucune), et chaque ticket reçoit l'étiquette `ios`, `android` ou `multiplateforme`.
 
 **Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
 
