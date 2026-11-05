@@ -61,7 +61,7 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 | Un écran | `Écran` | `Produits` |
 | Un élément | `Écran ["Libellé" type]` | `Accueil ["Connexion" button]` |
 | Un élément dans un autre | `Écran ["Libellé" type, "Libellé" type]` | `Contact ["Nous écrire" form, "Email" field]` |
-| Un élément répété | `["Libellé" type]` | `[Main navigation, "Accueil" tab]` |
+| Un élément sur tous les écrans | `All screens ["Libellé" type]` | `All screens [Main navigation, "Accueil" tab]` |
 | Un élément dans un état | `Écran ["Libellé" type] (état)` | `Accueil ["Valider" button] (disabled)` |
 | Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
 
