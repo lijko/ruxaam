@@ -67,7 +67,7 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 
 La notation sert à retrouver l'élément, pas à le décrire : libellé entre guillemets, type en clair, du plus large au plus précis, séparés par une virgule. L'état ne figure que s'il faut le provoquer pour voir le défaut ; sinon il est dit dans le commentaire.
 
-L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ».
+L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ». Chaque ticket reçoit aussi un tag indicatif « design », « code » ou les deux (quand le correctif dépend de la cause) ; le product owner le confirme au tri.
 
 **Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois : « 3 ticket(s) déjà exporté(s), 2 nouveau(x) ». « Tickets Jira : tout réexporter » reprend tous les critères non conformes, par exemple si l'import dans Jira a échoué. Le champ « Ticket Jira » des versions précédentes n'existe plus.
 
