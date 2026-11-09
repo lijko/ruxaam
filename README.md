@@ -42,6 +42,7 @@ Ouvrir `ruxaam.html` dans un navigateur. Aucune installation, aucun serveur, auc
 - **WCAG 2.1** : © W3C. Les numéros et intitulés des critères de succès viennent du RAAM ; les textes de RUXAAM sont originaux.
 - **Heuristiques d'utilisabilité** : Nielsen Norman Group, <https://www.nngroup.com/articles/ten-usability-heuristics/> (questions reformulées par RUXAAM, texte d'origine non reproduit).
 - **Échelle de gravité** : noms des quatre niveaux inspirés de l'échelle d'impact de Deque (axe-core, MPL-2.0), aucun code repris.
+- **Assistance IA** : RUXAAM a été créé avec l'aide de Claude (Anthropic), qui a participé à la conception de l'outil, a généré une grande partie du code et a donné des conseils de conception. Bertrand Kempf définit l'outil, relit et valide chaque modification.
 
 RUXAAM n'est ni approuvé ni certifié par le SIP, l'OSAPS, le W3C ou Deque Systems.
 
