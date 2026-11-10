@@ -54,20 +54,22 @@ Répartition (étape principale) : 1. Usage standard : 23 éléments ; 2. Agrand
 
 **Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi dans une barre qui reste visible pendant le défilement (avec Précédent / Suivant et le nombre de non-conformités par écran), plus la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
 
-**Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
+**Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments »). Le point descend dans la hiérarchie, les crochets visent l'élément, la flèche enchaîne un parcours :
 
 | Ce que tu désignes | Notation | Exemple |
 |---|---|---|
 | Un écran | `Écran` | `Produits` |
-| Un élément | `Écran ["Libellé" type]` | `Accueil ["Connexion" button]` |
-| Un élément dans un autre | `Écran ["Libellé" type, "Libellé" type]` | `Contact ["Nous écrire" form, "Email" field]` |
-| Un élément sur tous les écrans | `All screens ["Libellé" type]` | `All screens [Main navigation, "Accueil" tab]` |
-| Un élément dans un état | `Écran ["Libellé" type] (état)` | `Accueil ["Valider" button] (disabled)` |
+| Tous les éléments d'un type | `Écran[type]` | `Accueil[liens]` |
+| Un élément précis | `Écran[type "libellé"]` | `Accueil[bouton "Connexion"]` |
+| Une zone | `Écran.zone` | `Accueil.footer` |
+| Un élément dans une zone | `Écran.zone[type "libellé"]` | `Contact.formulaire[champ "Email"]` |
+| Sur tous les écrans | `All.zone[type]` | `All.footer[liens]` |
+| Un élément dans un état | `Écran[type "libellé"] (état)` | `Accueil[bouton "Valider"] (désactivé)` |
 | Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
 
-La notation sert à retrouver l'élément, pas à le décrire : libellé entre guillemets, type en clair, du plus large au plus précis, séparés par une virgule. L'état ne figure que s'il faut le provoquer pour voir le défaut ; sinon il est dit dans le commentaire.
+Le champ reçoit ce qui suit l'écran (`footer[liens]`, `[bouton "Fermer"]`) : l'outil ajoute l'écran, et un aperçu sous le champ montre la ligne du ticket. L'état ne figure que s'il faut le provoquer pour voir le défaut ; sinon il est dit dans le commentaire. Saisie en français ou en anglais : l'export Jira traduit en anglais les zones, types et états connus ; les libellés entre guillemets ne sont jamais traduits. Les anciennes notations des sauvegardes sont converties à l'ouverture.
 
-L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ». Chaque ticket reçoit aussi un tag indicatif « design », « code » ou les deux (quand le correctif dépend de la cause) ; le product owner le confirme au tri.
+L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern » : un écran, sa ligne complète ; plusieurs écrans, le titre les sépare par un point-virgule et le corps donne une ligne par écran ; tous les écrans de l'audit, `All`. Chaque ticket reçoit aussi un tag indicatif « design », « code » ou les deux (quand le correctif dépend de la cause) ; le product owner le confirme au tri.
 
 **Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois : « 3 ticket(s) déjà exporté(s), 2 nouveau(x) ». « Tickets Jira : tout réexporter » reprend tous les critères non conformes, par exemple si l'import dans Jira a échoué. Le champ « Ticket Jira » des versions précédentes n'existe plus.
 
